@@ -4,6 +4,9 @@ const express = require('express');
 //crear servidor
 const app = express();
 
+//entender formato json
+app.use(express.json());
+
 //este trozo de codigo es importante para que el servidor funcione
 //el primer parametro es la ruta, el segundo es el callback
 //con ruta siginifica que la ruta inicial es /, en este caso espesifico que la ruta inicial es /
@@ -24,11 +27,6 @@ app.get('/login', (req, res) => {
     res.send('<h1>login</h1> \n');
 });
 
-//crear otro esucha para el 404
-app.get('*', (req, res) => {
-    //estado de la respuesta con salida
-    res.send('404 \n');
-});
 
 /* METODOS USADOS EN EL SERVIDOR */
 //GET: obtener datos
@@ -37,14 +35,19 @@ app.get('*', (req, res) => {
 //DELETE: eliminar datos
 
 //crear metodo get
-app.get('/get', (req, res) => {
+app.get('/user', (req, res) => {
     //estado de la respuesta con salida
-    res.send(' METODO GET \n');
+    res.json({
+        "username": "juan",
+        "email": "sebastian@gmail.com"
+    });
 });
 
 //crear metodo post
-app.post('/post', (req, res) => {
+app.post('/user/:id', (req, res) => {
     //estado de la respuesta con salida
+    console.log(req.body);
+    console.log(req.params);
     res.send(' METODO POST \n');
 });
 
@@ -58,6 +61,12 @@ app.put('/put', (req, res) => {
 app.delete('/delete', (req, res) => {
     //estado de la respuesta con salida
     res.send(' METODO DELETE \n');
+});
+
+//crear otro esucha para el 404
+app.get('*', (req, res) => {
+    //estado de la respuesta con salida
+    res.send('404 \n');
 });
 
 //configurar servidor
