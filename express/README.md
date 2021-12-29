@@ -22,7 +22,7 @@
     });
     ```
 
-## METODOS HTTML 
+## METODOS HTTP 
 
 * GET: obtener datos
     ```
