@@ -30,6 +30,35 @@ app.get('*', (req, res) => {
     res.send('404 \n');
 });
 
+/* METODOS USADOS EN EL SERVIDOR */
+//GET: obtener datos
+//POST: crear datos
+//PUT: actualizar datos
+//DELETE: eliminar datos
+
+//crear metodo get
+app.get('/get', (req, res) => {
+    //estado de la respuesta con salida
+    res.send(' METODO GET \n');
+});
+
+//crear metodo post
+app.post('/post', (req, res) => {
+    //estado de la respuesta con salida
+    res.send(' METODO POST \n');
+});
+
+//crear metodo put
+app.put('/put', (req, res) => {
+    //estado de la respuesta con salida
+    res.send(' METODO PUT \n');
+});
+
+//crear metodo delete
+app.delete('/delete', (req, res) => {
+    //estado de la respuesta con salida
+    res.send(' METODO DELETE \n');
+});
 
 //configurar servidor
 app.listen(3000, () => {

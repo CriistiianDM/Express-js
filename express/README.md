@@ -21,3 +21,40 @@
     console.log('Servidor en el puerto 3000');
     });
     ```
+
+## METODOS HTTML 
+
+* GET: obtener datos
+    ```
+    app.get('/get', (req, res) => {
+    //estado de la respuesta con salida
+    res.send(' METODO GET \n');
+    });
+
+* POST: crear datos
+    ```
+    app.post('/post', (req, res) => {
+    //estado de la respuesta con salida
+    res.send(' METODO POST \n');
+    });
+
+    ```
+
+* PUT: actualizar datos
+    ```
+  app.put('/put', (req, res) => {
+    //estado de la respuesta con salida
+    res.send(' METODO PUT \n');
+  });
+
+    ```
+
+* DELETE: eliminar datos
+    ```
+    app.delete('/delete', (req, res) => {
+    //estado de la respuesta con salida
+    res.send(' METODO DELETE \n');
+    });
+
+    ```
+
