@@ -11,7 +11,7 @@
 * Paso 3: configuracion del servidor
     ```
     app.get('/', (req, res) => {
-    //stado de la respuesta con salida
+    //estado de la respuesta con salida
     res.send('Hola Mundo bebe\n');
     }); 
     ```
