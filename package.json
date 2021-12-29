@@ -1,0 +1,20 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "Este repositorio esta enfocado a mejorar mis habiliadades en express para terminar el repositorio de registro de notas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CriistiianDM/Express-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CriistiianDM/Express-js/issues"
+  },
+  "homepage": "https://github.com/CriistiianDM/Express-js#readme"
+}
