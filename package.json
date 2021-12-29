@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/CriistiianDM/Express-js/issues"
   },
-  "homepage": "https://github.com/CriistiianDM/Express-js#readme"
+  "homepage": "https://github.com/CriistiianDM/Express-js#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
