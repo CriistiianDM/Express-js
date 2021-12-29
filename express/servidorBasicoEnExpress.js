@@ -7,6 +7,14 @@ const app = express();
 //entender formato json
 app.use(express.json());
 
+//aqui va todas las verficaciones antes que se ejecuten las peticiones http
+app.all('/user', (req, res, next) => {
+    //aqui terminaria la verificacion, si se desvia la peticion se ejecutaria el siguiente middleware
+    //res.send('Hola mundo');
+    console.log('Hola mundo');
+    next();
+});
+
 //este trozo de codigo es importante para que el servidor funcione
 //el primer parametro es la ruta, el segundo es el callback
 //con ruta siginifica que la ruta inicial es /, en este caso espesifico que la ruta inicial es /
@@ -52,15 +60,16 @@ app.post('/user/:id', (req, res) => {
 });
 
 //crear metodo put
-app.put('/put', (req, res) => {
+app.put('/user/:id', (req, res) => {
     //estado de la respuesta con salida
-    res.send(' METODO PUT \n');
+    console.log(req.body);
+    res.send(`USER ${req.body.id} ${req.params.id} ACTUALIZADO \n`);
 });
 
 //crear metodo delete
-app.delete('/delete', (req, res) => {
+app.delete('/user/:id', (req, res) => {
     //estado de la respuesta con salida
-    res.send(' METODO DELETE \n');
+    res.send(`USER ${req.params.id} DELETED \n`);
 });
 
 //crear otro esucha para el 404

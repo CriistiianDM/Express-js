@@ -91,3 +91,15 @@
     });
 
     ```
+
+* Para ejecutar comandos antes de que se ejecuten las peticiones http
+  
+    ```
+    //aqui va todas las verficaciones antes que se ejecuten las peticiones http
+    app.all('/user', (req, res, next) => {
+    //aqui terminaria la verificacion, si se desvia la peticion se ejecutaria el siguiente middleware
+    //res.send('Hola mundo');
+    console.log('Hola mundo');
+    next();
+    });
+    ```
