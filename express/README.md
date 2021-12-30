@@ -135,7 +135,7 @@
 
 * Hay varios templates y uno de esos y mas popular es el ejs donde se le pasa la consulta de la base de datos y se pinta en html lo que se necesita
 
-Ejemplo de syntaxis:
+ Ejemplo de syntaxis:
 
     ```
     //primero es agregar en lo settings el template 
