@@ -1,32 +1,24 @@
 //importar libreria de router de express
 const { Router } = require('express');
-
+const { getTask, postTask , putTask, deleteTask } = require('../controllers/task.controllers');
 //iniciar router
 const router = Router();
 
 
 //capturar get de la pagina principal /
-router.get('/', (req, res) => {
-    res.send('Method GET');
-});
+router.get('/', getTask);
 
 
 //methos post
-router.post('/', (req, res) => {
-   res.send('Method POST');
-});
+router.post('/', postTask );
 
 
 //methos put
-router.put('/', (req, res) => {
-    res.send('Method PUT');
-});
+router.put('/', putTask );
 
 
 //methos delete
-router.delete('/', (req, res) => {
-    res.send('Method DELETE');
-});
+router.delete('/', deleteTask);
 
 
 //404 route
